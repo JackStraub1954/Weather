@@ -1,0 +1,1 @@
+This is a Python program to experiment with weather APIs. To start with, works with the NOAA weather and TomTom geo APIs.
