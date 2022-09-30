@@ -1,8 +1,13 @@
+# Provides access to the NOAA api ("national weather service", NWS).
+# This is for obtaining current conditions and forecasts, not historical data.
+
 from logging import exception
 
 import requests
 from requests.exceptions import HTTPError
 import json
+
+from NOAA_v1 import Utils
 
 
 class NOAA:
@@ -34,13 +39,13 @@ class NOAA:
 
     def get_glossary(self):
         url = "https://api.weather.gov/glossary/"
-        response = self.__api_call(url)
+        response = self.__api_call(url, headers=self.class_headers)
         return response
 
     def get_latest_for_station(self, station_id):
         url = f"https://api.weather.gov/stations/{station_id}/observations/latest"
         parameters = None
-        response = self.__api_call(url)
+        response = self.__api_call(url, headers=self.class_headers)
         return response
 
     def get_forecast(
@@ -68,12 +73,12 @@ class NOAA:
               + f"{grid_id}/{grid_x},{grid_y}/forecast/"
         if hourly:
             url += "hourly/"
-        response = self.__api_call(url, parameters=parameters)
+        response = self.__api_call(url, headers=self.class_headers, parameters=parameters)
         return response
 
     def get_station(self, station_id):
         url = f"https://api.weather.gov/stations/{station_id}"
-        response = self.__api_call(url)
+        response = self.__api_call(url, headers=self.class_headers)
         return response
 
     def get_stations(self, grid_id=None, grid_x=None, grid_y=None):
@@ -90,12 +95,12 @@ class NOAA:
             raise exception(message)
         url = "https://api.weather.gov/gridpoints/" \
               + f"{grid_id}/{grid_x},{grid_y}/stations"
-        response = self.__api_call(url)
+        response = self.__api_call(url, headers=self.class_headers)
         return response
 
     def get_office(self, oid):
         url = f"https://api.weather.gov/offices/{oid}"
-        response = self.__api_call(url)
+        response = self.__api_call(url, headers=self.class_headers)
         return response
 
     def get_grid_points(
@@ -112,7 +117,7 @@ class NOAA:
             message = f"invalid latitude ({lat}) and/or longitude ({lon})"
             raise exception(message)
         url = f"https://api.weather.gov/points/{lat},{lon}"
-        response = self.__api_call(url)  # , headers)
+        response = self.__api_call(url, headers=self.class_headers)
         if response is not None:
             props = response["properties"]
             self.grid_id = props["gridId"]
@@ -122,20 +127,8 @@ class NOAA:
 
     def __api_call(self, url, headers=class_headers, parameters=None):
         print("__api_call/url: " + str(url))
-        decoded_response = None
-        try:
-            response = requests.get(url, headers=headers, params=parameters)
-            self.latest_response = response
-            response.raise_for_status()
+        result = Utils.api_call(url, headers, parameters)
+        self.latest_response = result[0]
+        self.latest_error = result[1]
 
-            if response.status_code == 200:
-                decoded_response = json.loads(response.content.decode('utf-8'))
-
-        except HTTPError as http_err:
-            self.latest_error = http_err
-            print(f'HTTP error occurred: {http_err}')
-        except Exception as err:
-            self.latest_error = err
-            print(f'Other error occurred: {err}')
-
-        return decoded_response
+        return self.latest_response
