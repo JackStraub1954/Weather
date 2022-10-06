@@ -5,18 +5,20 @@ import traceback
 
 ncdc = NCDC()
 try:
-    response = ncdc.get_all_datasets()
+    params = {'startdate': '2022-03-01', 'enddate': '2022-03-15', "locationid": "ZIP:98045"}
+    response = ncdc.get_data('GHCND', parameters=params)
     if response is None:
-        raise Exception("no response from get_all_datasets")
+        raise Exception("no response from get_data")
+    print(response)
     print(response["results"])
     for x in response["results"]:
         print(x)
 
-    uid = response["results"][0]["id"]
-    response = ncdc.get_dataset(uid)
-    if response is None:
-        raise Exception("no response from get_dataset")
-    print(response)
+#    uid = response["results"][0]["id"]
+#    response = ncdc.get_dataset(uid)
+#    if response is None:
+#        raise Exception("no response from get_dataset")
+#    print(response)
 
 except Exception as exc:
     message = f"Error: {exc}"
