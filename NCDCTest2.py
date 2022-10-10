@@ -1,5 +1,6 @@
 import traceback
 
+import Utils
 from NOAA_v1.Datasets import NCDC
 import traceback
 
@@ -10,9 +11,9 @@ try:
     if response is None:
         raise Exception("no response from get_data")
     print(response)
-    print(response["results"])
-    for x in response["results"]:
-        print(x)
+    Utils.print_formatted(response)
+    # for x in response["results"]:
+    #     print(x)
 
 #    uid = response["results"][0]["id"]
 #    response = ncdc.get_dataset(uid)

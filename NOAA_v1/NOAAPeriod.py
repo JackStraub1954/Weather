@@ -3,7 +3,7 @@ import http
 import dateutil
 import dateutil.parser
 import datetime
-import NOAA_v1.Utils as Utils
+import NOAA_v1.NOAAUtils as Utils
 
 
 class NOAAPeriod:

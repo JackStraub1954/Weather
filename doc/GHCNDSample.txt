@@ -1,0 +1,163 @@
+C:\Users\johns\anaconda3\envs\PythonTutorialSnippets\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.2.1/plugins/python-ce/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 57422 --file C:/Users/johns/Workspaces/PycharmProjects/weather/NCDCTest2.py 
+NCDC __api_call/url: https://www.ncei.noaa.gov/cdo-web/api/v2/data
+api_call/initial url: https://www.ncei.noaa.gov/cdo-web/api/v2/data
+api_call/formatted url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?startdate=2022-03-01&enddate=2022-03-15&locationid=ZIP%3A98045&datasetid=GHCND
+{'metadata': {'resultset': {'offset': 1, 'count': 436, 'limit': 25}}, 'results': [{'date': '2022-03-01T00:00:00', 'datatype': 'PRCP', 'station': 'GHCND:US1WAKG0007', 'attributes': ',,N,0700', 'value': 965}, {'date': '2022-03-01T00:00:00', 'datatype': 'PRCP', 'station': 'GHCND:US1WAKG0143', 'attributes': ',,N,0630', 'value': 1034}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNOW', 'station': 'GHCND:US1WAKG0143', 'attributes': ',,N,0630', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNWD', 'station': 'GHCND:US1WAKG0143', 'attributes': ',,N,0630', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'WESD', 'station': 'GHCND:US1WAKG0143', 'attributes': ',,N,0630', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'WESF', 'station': 'GHCND:US1WAKG0143', 'attributes': ',,N,0630', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'PRCP', 'station': 'GHCND:USC00451233', 'attributes': ',,7,0800', 'value': 1163}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNOW', 'station': 'GHCND:USC00451233', 'attributes': ',,7,', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNWD', 'station': 'GHCND:USC00451233', 'attributes': ',,7,', 'value': 0}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMAX', 'station': 'GHCND:USC00451233', 'attributes': ',,7,0800', 'value': 94}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMIN', 'station': 'GHCND:USC00451233', 'attributes': ',,7,0800', 'value': 28}, {'date': '2022-03-01T00:00:00', 'datatype': 'TOBS', 'station': 'GHCND:USC00451233', 'attributes': ',,7,0800', 'value': 61}, {'date': '2022-03-01T00:00:00', 'datatype': 'TAVG', 'station': 'GHCND:USR0000WFTA', 'attributes': ',,U,', 'value': 81}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMAX', 'station': 'GHCND:USR0000WFTA', 'attributes': 'H,,U,', 'value': 106}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMIN', 'station': 'GHCND:USR0000WFTA', 'attributes': 'H,,U,', 'value': 50}, {'date': '2022-03-01T00:00:00', 'datatype': 'PRCP', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 229}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNWD', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 1549}, {'date': '2022-03-01T00:00:00', 'datatype': 'TAVG', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 29}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMAX', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 50}, {'date': '2022-03-01T00:00:00', 'datatype': 'TMIN', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 19}, {'date': '2022-03-01T00:00:00', 'datatype': 'TOBS', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 21}, {'date': '2022-03-01T00:00:00', 'datatype': 'WESD', 'station': 'GHCND:USS0021B20S', 'attributes': ',,T,', 'value': 6045}, {'date': '2022-03-01T00:00:00', 'datatype': 'PRCP', 'station': 'GHCND:USS0021B21S', 'attributes': ',,T,', 'value': 406}, {'date': '2022-03-01T00:00:00', 'datatype': 'SNWD', 'station': 'GHCND:USS0021B21S', 'attributes': ',,T,', 'value': 686}, {'date': '2022-03-01T00:00:00', 'datatype': 'TAVG', 'station': 'GHCND:USS0021B21S', 'attributes': ',,T,', 'value': 54}]}
+[metadata]: 
+    [resultset]: 
+        [offset]: 1
+        [count]: 436
+        [limit]: 25
+[results]: 
+    [0]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: PRCP
+        [station]: GHCND:US1WAKG0007
+        [attributes]: ,,N,0700
+        [value]: 965
+    [1]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: PRCP
+        [station]: GHCND:US1WAKG0143
+        [attributes]: ,,N,0630
+        [value]: 1034
+    [2]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNOW
+        [station]: GHCND:US1WAKG0143
+        [attributes]: ,,N,0630
+        [value]: 0
+    [3]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNWD
+        [station]: GHCND:US1WAKG0143
+        [attributes]: ,,N,0630
+        [value]: 0
+    [4]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: WESD
+        [station]: GHCND:US1WAKG0143
+        [attributes]: ,,N,0630
+        [value]: 0
+    [5]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: WESF
+        [station]: GHCND:US1WAKG0143
+        [attributes]: ,,N,0630
+        [value]: 0
+    [6]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: PRCP
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,0800
+        [value]: 1163
+    [7]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNOW
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,
+        [value]: 0
+    [8]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNWD
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,
+        [value]: 0
+    [9]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMAX
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,0800
+        [value]: 94
+    [10]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMIN
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,0800
+        [value]: 28
+    [11]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TOBS
+        [station]: GHCND:USC00451233
+        [attributes]: ,,7,0800
+        [value]: 61
+    [12]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TAVG
+        [station]: GHCND:USR0000WFTA
+        [attributes]: ,,U,
+        [value]: 81
+    [13]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMAX
+        [station]: GHCND:USR0000WFTA
+        [attributes]: H,,U,
+        [value]: 106
+    [14]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMIN
+        [station]: GHCND:USR0000WFTA
+        [attributes]: H,,U,
+        [value]: 50
+    [15]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: PRCP
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 229
+    [16]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNWD
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 1549
+    [17]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TAVG
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 29
+    [18]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMAX
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 50
+    [19]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TMIN
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 19
+    [20]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TOBS
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 21
+    [21]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: WESD
+        [station]: GHCND:USS0021B20S
+        [attributes]: ,,T,
+        [value]: 6045
+    [22]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: PRCP
+        [station]: GHCND:USS0021B21S
+        [attributes]: ,,T,
+        [value]: 406
+    [23]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: SNWD
+        [station]: GHCND:USS0021B21S
+        [attributes]: ,,T,
+        [value]: 686
+    [24]: 
+        [date]: 2022-03-01T00:00:00
+        [datatype]: TAVG
+        [station]: GHCND:USS0021B21S
+        [attributes]: ,,T,
+        [value]: 54
+
+Process finished with exit code 0

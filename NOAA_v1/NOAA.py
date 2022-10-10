@@ -7,7 +7,8 @@ import requests
 from requests.exceptions import HTTPError
 import json
 
-from NOAA_v1 import Utils
+from NOAA_v1 import NOAAUtils
+from NOAA_v1 import NOAAUtils
 
 
 class NOAA:
@@ -127,7 +128,7 @@ class NOAA:
 
     def __api_call(self, url, headers=class_headers, parameters=None):
         print("__api_call/url: " + str(url))
-        result = Utils.api_call(url, headers, parameters)
+        result = NOAAUtils.api_call(url, headers, parameters)
         self.latest_response = result[0]
         self.latest_error = result[1]
 

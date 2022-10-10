@@ -1,4 +1,4 @@
-from NOAA_v1 import Utils
+from NOAA_v1 import NOAAUtils
 
 
 class NCDC:
@@ -31,7 +31,7 @@ class NCDC:
         if headers is None:
             headers = NCDC.ncdc_headers
         print("NCDC __api_call/url: " + str(url))
-        result = Utils.api_call(url, headers, parameters)
+        result = NOAAUtils.api_call(url, headers, parameters)
         self.latest_response = result[0]
         self.latest_error = result[1]
 
