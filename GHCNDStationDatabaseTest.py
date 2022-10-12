@@ -12,9 +12,9 @@ try:
 #    print(">>" + first[end - 2] + "<<")
 
     rec1 = GHCNDStationData(122045)
-    ghcnd_dbase.print(122045)
+    print(122045)
     print(rec1)
-    ghcnd_dbase.print(1)
+    print(1)
     print(GHCNDStationData(1))
 except Exception as err:
     print("error reading station database")
